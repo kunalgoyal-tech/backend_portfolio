@@ -4,7 +4,7 @@ export const sendData = async (req, res) => {
      
         const { name, email, phone, message } = req.body;
         if (!name || !email || !phone || !message) {
-            return res.status(200).json({ message: "Please fill in all details." });
+            return res.status(200).json({ message: "Kindly fill in all details." });
         }
       console.log(" working", req.body.name)
       const userData = await PortfolioData.create({ name, email, phone, message });
